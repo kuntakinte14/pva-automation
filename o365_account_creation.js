@@ -1,8 +1,12 @@
 const webdriver = require('selenium-webdriver');
 const By = webdriver.By;
 const until = webdriver.until;
+const chrome = require("selenium-webdriver/chrome");
 const async_request = require('request-promise');
 const moment = require('moment');
+
+const options = new chrome.Options();
+options.addArguments('--headless');
 
 const args = process.argv;
 var fName, lName, email, phone, vphone, company, uId, domain, pWord, proxy;
@@ -137,9 +141,17 @@ const driver = new webdriver
 	.build();
 */
 
+/* old webdriver object creation code
 const driver = new webdriver
 	.Builder()
 	.withCapabilities(webdriver.Capabilities.chrome())
+	.build();
+*/
+
+const driver = new webdriver
+	.Builder()
+	.forBrowser('chrome')
+	.setChromeOptions(options)
 	.build();
 
 driver.get('https://products.office.com/en-us/compare-all-microsoft-office-products?tab=2');
