@@ -12,8 +12,12 @@ maintained as a seperate web application. Full documentation of that application
     
 REQUIREMENTS:
 
-In order to run the code, you need to install ChromeDriver, a standalone server which implements WebDriver's wire protocol. 
-Here is a link with information on ChromeDriver - https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
+In order to run the code, you need to install the following:
+
+- node.js (npm install)
+- selenium-webdriver (https://www.npmjs.com/package/selenium-webdriver) 
+- ChromeDriver, a standalone server which implements WebDriver's wire protocol. Here is a link with information on ChromeDriver - https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
+- A couple other dependencies: require-promise (https://www.npmjs.com/package/request-promise), and moment (https://www.npmjs.com/package/moment)
 
 
 DETAILS:
